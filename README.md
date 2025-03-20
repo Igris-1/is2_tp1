@@ -53,6 +53,11 @@ Me hubiera gustado hacer uso de una **BDD propiamente dicha**, pero no contaba c
 
 Se han implementado pruebas automatizadas usando [httptest](https://pkg.go.dev/net/http/httptest) y [Testify](https://pkg.go.dev/github.com/stretchr/testify/assert).
 
+> Para ejecutar los tests, desde la raiz del proyecto
+```sh
+go test ./test/ -v
+```
+
 ### 7. Comandos
 
 > Los comandos `cURL` utilizados fueron los siguientes
