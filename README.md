@@ -12,11 +12,11 @@
 
 ## 1. Introducción
 
-En este trabajo se buscan implementar los endpoints `GET`, `POST`, `GET/{id}` y `DELETE/{id}` siguiendo el contrato HTTP. Al llegar un nuevo request, la clase **Router** se encarga de recibirlo y derivar la consulta al método apropiado de la clase **Controller**.
-
-Los mensajes de *snap* se guardan con un **UUID identificatorio** y un **timestamp**. Se busca usar el timestamp para organizar los snaps en orden cronológico inverso al recibir el comando `GET`.
-
-Se tiene una base de datos donde se guardan los snaps. Los errores que pueden ocurrir en los diferentes endpoints se manejan siguiendo el formato de la **RFC 7807**.
+En este trabajo se implementan los endpoints GET, POST, GET/{id} y DELETE/{id} siguiendo el 
+contrato HTTP. Al llegar un nuevo request, el Router de Gin lo recibe y lo dirige al handler 
+correspondiente (CourseHandler), que se encarga de validar la solicitud y llamar al servicio adecuado. 
+El servicio gestiona la lógica de negocio e interactúa con el repositorio, donde se almacena 
+la información en memoria.
 
 ## 2. Desafíos Encontrados
 
