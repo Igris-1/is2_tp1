@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"github.com/Igris-1/classconnect/internals/models"
 	"github.com/Igris-1/classconnect/internals/services"
 	"github.com/Igris-1/classconnect/pkg/utils"
 	"net/http"
@@ -38,6 +39,11 @@ func (h *CourseHandler) CreateCourse(c *gin.Context) {
 // GetAllCourses devuelve todos los cursos
 func (h *CourseHandler) GetAllCourses(c *gin.Context) {
 	courses := h.service.GetAllCourses()
+
+	if courses == nil {
+		courses = []models.Course{}
+	}
+
 	c.JSON(http.StatusOK, gin.H{"data": courses})
 }
 
